@@ -12,18 +12,18 @@
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: linear-gradient(0deg, rgba(208,139,199,1) 0%, rgba(0,13,60,1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: black;
 }
-
 
 /* Typeography General*/
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
+    color: #fff;
 }
 
 @media only screen and (min-width: 35em){
@@ -60,18 +60,27 @@ section {
     min-height: 80vh;
 }
 
-
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: center;
+    padding: 32px;
 }
 
 .navbar__menu li {
     display: inline-block;
+    margin-right: 32px;
+    text-transform: uppercase;
+}
+
+.navbar__menu a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Oxygen', Sans-Serif;
 }
 
 .navbar__menu .menu__link {
@@ -107,7 +116,6 @@ section {
 .page__footer p{
     color: #fff;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
@@ -189,13 +197,11 @@ section:nth-of-type(3n + 1) .landing__container::after {
     transition: ease 0.5s all;
 }
 
-
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: rgba(0, 0, 0, .5);
 }
 
 section.your-active-class .landing__container::before {
