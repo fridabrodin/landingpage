@@ -21,7 +21,6 @@
 
 const sections = document.querySelectorAll("section");
 const nav = document.querySelector("#navbar__list");
-const link = document.querySelectorAll("#navbar__list li a");
 
 /**
  *
