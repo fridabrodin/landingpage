@@ -21,7 +21,6 @@
 
 const sections = document.querySelectorAll("section");
 const nav = document.querySelector("#navbar__list");
-const links = document.anchor;
 
 /**
  *
@@ -56,8 +55,9 @@ nav.addEventListener("click", function (event) {
   //To just have one active section with the class, we need to remove the class first with a loop
   removeAllActiveClass();
   event.preventDefault();
-  // Get the active section, add scroll and active class
+  // Get the active link and section, add scroll and active class
   const section = document.querySelector(event.target.getAttribute("href"));
+  event.target.classList.add("active");
   section.scrollIntoView({ behavior: "smooth" });
   addActiveClass(section);
 });
@@ -88,6 +88,10 @@ document.addEventListener("scroll", function () {
 });
 
 function removeAllActiveClass() {
+  const links = document.querySelectorAll("#navbar__list a");
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.remove("active");
+  }
   for (let i = 0; i < sections.length; i++) {
     sections[i].classList.remove("your-active-class");
   }

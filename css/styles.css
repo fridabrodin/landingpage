@@ -97,6 +97,10 @@ section {
     transition: ease 0.3s all;
 }
 
+.active {
+    font-weight: bold;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
