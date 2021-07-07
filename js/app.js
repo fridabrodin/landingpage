@@ -21,6 +21,7 @@
 
 const sections = document.querySelectorAll("section");
 const nav = document.querySelector("#navbar__list");
+const link = document.querySelectorAll("#navbar__list li a");
 
 /**
  *
@@ -55,12 +56,14 @@ nav.addEventListener("click", function (event) {
   //To just have one active section with the class, we need to remove the class first with a loop
   removeAllActiveClass();
   event.preventDefault();
+  if (event.target.tagName.toLowerCase() === "a"){
   // Get the active link and section, add scroll and active class
   const section = document.querySelector(event.target.getAttribute("href"));
   event.target.classList.add("active");
   section.scrollIntoView({ behavior: "smooth" });
-  addActiveClass(section);
-});
+  addActiveClass(section);}
+ });
+
 
 // Check if element is at top of viewport
 
